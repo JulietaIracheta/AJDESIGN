@@ -14,10 +14,8 @@ namespace Entidades
     
     public partial class Disenios
     {
-        public int IdDisenio { get; set; }
-        public int IdPrecio { get; set; }
+        public int IdDisenios { get; set; }
         public string Nombre { get; set; }
-    
-        public virtual Precios Precios { get; set; }
+        public int Precio { get; set; }
     }
 }

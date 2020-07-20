@@ -25,8 +25,8 @@ namespace Entidades
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Administrador> Administrador { get; set; }
         public virtual DbSet<Disenios> Disenios { get; set; }
-        public virtual DbSet<Precios> Precios { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<Usuarios> Usuarios { get; set; }
     }
 }

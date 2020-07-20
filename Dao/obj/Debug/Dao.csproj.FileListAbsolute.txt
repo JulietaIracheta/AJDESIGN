@@ -1,0 +1,14 @@
+C:\Users\pc\source\repos\AJDesign\Dao\bin\Debug\Dao.dll
+C:\Users\pc\source\repos\AJDesign\Dao\bin\Debug\Dao.pdb
+C:\Users\pc\source\repos\AJDesign\Dao\bin\Debug\Entidades.dll
+C:\Users\pc\source\repos\AJDesign\Dao\bin\Debug\EntityFramework.dll
+C:\Users\pc\source\repos\AJDesign\Dao\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pc\source\repos\AJDesign\Dao\bin\Debug\Entidades.pdb
+C:\Users\pc\source\repos\AJDesign\Dao\bin\Debug\Entidades.dll.config
+C:\Users\pc\source\repos\AJDesign\Dao\bin\Debug\EntityFramework.xml
+C:\Users\pc\source\repos\AJDesign\Dao\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pc\source\repos\AJDesign\Dao\obj\Debug\Dao.csprojAssemblyReference.cache
+C:\Users\pc\source\repos\AJDesign\Dao\obj\Debug\Dao.csproj.CoreCompileInputs.cache
+C:\Users\pc\source\repos\AJDesign\Dao\obj\Debug\Dao.csproj.CopyComplete
+C:\Users\pc\source\repos\AJDesign\Dao\obj\Debug\Dao.dll
+C:\Users\pc\source\repos\AJDesign\Dao\obj\Debug\Dao.pdb

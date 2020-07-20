@@ -1,0 +1,17 @@
+C:\Users\pc\source\repos\AJDesign\Servicios\bin\Debug\Servicios.dll.config
+C:\Users\pc\source\repos\AJDesign\Servicios\bin\Debug\Servicios.dll
+C:\Users\pc\source\repos\AJDesign\Servicios\bin\Debug\Servicios.pdb
+C:\Users\pc\source\repos\AJDesign\Servicios\bin\Debug\Dao.dll
+C:\Users\pc\source\repos\AJDesign\Servicios\bin\Debug\Entidades.dll
+C:\Users\pc\source\repos\AJDesign\Servicios\bin\Debug\EntityFramework.dll
+C:\Users\pc\source\repos\AJDesign\Servicios\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pc\source\repos\AJDesign\Servicios\bin\Debug\Dao.pdb
+C:\Users\pc\source\repos\AJDesign\Servicios\bin\Debug\Entidades.pdb
+C:\Users\pc\source\repos\AJDesign\Servicios\bin\Debug\Entidades.dll.config
+C:\Users\pc\source\repos\AJDesign\Servicios\bin\Debug\EntityFramework.xml
+C:\Users\pc\source\repos\AJDesign\Servicios\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pc\source\repos\AJDesign\Servicios\obj\Debug\Servicios.csprojAssemblyReference.cache
+C:\Users\pc\source\repos\AJDesign\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
+C:\Users\pc\source\repos\AJDesign\Servicios\obj\Debug\Servicios.csproj.CopyComplete
+C:\Users\pc\source\repos\AJDesign\Servicios\obj\Debug\Servicios.dll
+C:\Users\pc\source\repos\AJDesign\Servicios\obj\Debug\Servicios.pdb

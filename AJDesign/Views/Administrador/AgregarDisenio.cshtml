@@ -1,0 +1,29 @@
+﻿@model Entidades.Views.VMAgregarDisenios
+@{
+    ViewBag.Title = "AgregarDisenio";
+}
+
+<h2>AgregarDisenio</h2>
+
+@using (Html.BeginForm("AgregarDisenio", "Administrador", FormMethod.Post, new { @class = "login100-form validate-form p-b-33 p-t-5" }))
+{
+    <div class="wrap-input100 validate-input">
+        @*Inputs con razor*@
+        @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "input100" } })
+        <span class="focus-input100"></span>
+        @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+    </div>
+    <br />
+
+    <div class="wrap-input100 validate-input">
+        @*Inputs con razor*@
+        @Html.EditorFor(model => model.Precio, new { htmlAttributes = new { @class = "input100" } })
+        <span class="focus-input100"></span>
+        @Html.ValidationMessageFor(model => model.Precio, "", new { @class = "text-danger" })
+    </div>
+    <br />
+
+
+    <button type="submit">Agregar diseño</button>
+}
+

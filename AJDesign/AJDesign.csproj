@@ -1,4 +1,5 @@
 ﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -43,6 +44,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -88,12 +95,123 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Css\fontawesome-all.min.css" />
+    <Content Include="Content\Css\Footer.css" />
+    <Content Include="Content\Css\main.css" />
+    <Content Include="Content\img\ajdesign.ico" />
+    <Content Include="Content\img\ajdesign.png" />
+    <Content Include="Content\img\avatar.jpg" />
+    <Content Include="Content\img\bg.jpg" />
+    <Content Include="Content\img\favicon.ico" />
+    <Content Include="Content\img\fulls\01.jpg" />
+    <Content Include="Content\img\fulls\02.jpg" />
+    <Content Include="Content\img\fulls\03.jpg" />
+    <Content Include="Content\img\fulls\04.jpg" />
+    <Content Include="Content\img\fulls\05.jpg" />
+    <Content Include="Content\img\fulls\06.jpg" />
+    <Content Include="Content\img\fulls\a.jpg" />
+    <Content Include="Content\img\fulls\b.jpg" />
+    <Content Include="Content\img\fulls\c.jpg" />
+    <Content Include="Content\img\fulls\d.jpg" />
+    <Content Include="Content\img\fulls\e.jpg" />
+    <Content Include="Content\img\fulls\f.jpg" />
+    <Content Include="Content\img\fulls\g.jpg" />
+    <Content Include="Content\img\fulls\h.jpg" />
+    <Content Include="Content\img\fulls\i.jpg" />
+    <Content Include="Content\img\fulls\j.jpg" />
+    <Content Include="Content\img\fulls\k.jpg" />
+    <Content Include="Content\img\fulls\l.jpg" />
+    <Content Include="Content\img\fulls\m.jpg" />
+    <Content Include="Content\img\fulls\n.jpg" />
+    <Content Include="Content\img\fulls\o.jpg" />
+    <Content Include="Content\img\fulls\p.jpg" />
+    <Content Include="Content\img\fulls\q.jpg" />
+    <Content Include="Content\img\fulls\r.png" />
+    <Content Include="Content\img\fulls\s.jpg" />
+    <Content Include="Content\img\fulls\t.jpg" />
+    <Content Include="Content\img\fulls\u.jpg" />
+    <Content Include="Content\img\fulls\v.jpg" />
+    <Content Include="Content\img\fulls\w.jpg" />
+    <Content Include="Content\img\overlay.png" />
+    <Content Include="Content\img\thumbs\01.jpg" />
+    <Content Include="Content\img\thumbs\02.jpg" />
+    <Content Include="Content\img\thumbs\03.jpg" />
+    <Content Include="Content\img\thumbs\04.jpg" />
+    <Content Include="Content\img\thumbs\05.jpg" />
+    <Content Include="Content\img\thumbs\06.jpg" />
+    <Content Include="Content\img\thumbs\a.jpg" />
+    <Content Include="Content\img\thumbs\b.jpg" />
+    <Content Include="Content\img\thumbs\c.jpg" />
+    <Content Include="Content\img\thumbs\d.jpg" />
+    <Content Include="Content\img\thumbs\e.jpg" />
+    <Content Include="Content\img\thumbs\f.jpg" />
+    <Content Include="Content\img\thumbs\g.jpg" />
+    <Content Include="Content\img\thumbs\h.jpg" />
+    <Content Include="Content\img\thumbs\i.jpg" />
+    <Content Include="Content\img\thumbs\j.jpg" />
+    <Content Include="Content\img\thumbs\k.jpg" />
+    <Content Include="Content\img\thumbs\l.jpg" />
+    <Content Include="Content\img\thumbs\m.jpg" />
+    <Content Include="Content\img\thumbs\n.jpg" />
+    <Content Include="Content\img\thumbs\o.jpg" />
+    <Content Include="Content\img\thumbs\p.jpg" />
+    <Content Include="Content\img\thumbs\q.jpg" />
+    <Content Include="Content\img\thumbs\r.png" />
+    <Content Include="Content\img\thumbs\s.jpg" />
+    <Content Include="Content\img\thumbs\t.jpg" />
+    <Content Include="Content\img\thumbs\u.jpg" />
+    <Content Include="Content\img\thumbs\v.jpg" />
+    <Content Include="Content\img\thumbs\w.jpg" />
+    <Content Include="Content\js\breakpoints.min.js" />
+    <Content Include="Content\js\browser.min.js" />
+    <Content Include="Content\js\jquery.min.js" />
+    <Content Include="Content\js\jquery.poptrox.min.js" />
+    <Content Include="Content\js\main.js" />
+    <Content Include="Content\js\util.js" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\webfonts\fa-brands-400.svg" />
+    <Content Include="Content\webfonts\fa-regular-400.svg" />
+    <Content Include="Content\webfonts\fa-solid-900.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\sass\libs\_breakpoints.scss" />
+    <Content Include="Content\sass\libs\_functions.scss" />
+    <Content Include="Content\sass\libs\_html-grid.scss" />
+    <Content Include="Content\sass\libs\_mixins.scss" />
+    <Content Include="Content\sass\libs\_vars.scss" />
+    <Content Include="Content\sass\libs\_vendor.scss" />
+    <Content Include="Content\sass\main.scss" />
+    <Content Include="Content\webfonts\fa-brands-400.eot" />
+    <Content Include="Content\webfonts\fa-brands-400.ttf" />
+    <Content Include="Content\webfonts\fa-brands-400.woff" />
+    <Content Include="Content\webfonts\fa-brands-400.woff2" />
+    <Content Include="Content\webfonts\fa-regular-400.eot" />
+    <Content Include="Content\webfonts\fa-regular-400.ttf" />
+    <Content Include="Content\webfonts\fa-regular-400.woff" />
+    <Content Include="Content\webfonts\fa-regular-400.woff2" />
+    <Content Include="Content\webfonts\fa-solid-900.eot" />
+    <Content Include="Content\webfonts\fa-solid-900.ttf" />
+    <Content Include="Content\webfonts\fa-solid-900.woff" />
+    <Content Include="Content\webfonts\fa-solid-900.woff2" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdministradorController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PreciosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -101,7 +219,26 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Views\Home\Registro.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Precios\Precio.cshtml" />
+    <Content Include="Views\Shared\VPFooter.cshtml" />
+    <Content Include="Views\Administrador\ModificarDisenio.cshtml" />
+    <Content Include="Views\Administrador\AgregarDisenio.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -112,7 +249,16 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Administrador\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{40C51E9F-D8B6-4687-8B11-33732F73770B}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Servicios\Servicios.csproj">
+      <Project>{53646879-2738-48A3-9265-4DB08BF20B72}</Project>
+      <Name>Servicios</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -144,7 +290,10 @@
       <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
   </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

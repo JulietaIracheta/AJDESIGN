@@ -1,0 +1,175 @@
+﻿@{
+    ViewBag.Title = "Home |";
+}
+
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>AJDesign</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link href="~/Content/Css/main.css" rel="stylesheet" />
+
+</head>
+<body class="is-preload">
+
+    <!-- Header -->
+    <header id="header">
+        <div class="inner">
+            <center><a class="image avatar"><img src="~/Content/img/ajdesign.png" /></a></center>
+            <center>
+                <h1>
+                    <div class="icon brands fa-whatsapp"> 11 3084-3934</div>
+                </h1>
+            </center>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- One -->
+        <section id="one">
+            <header class="major">
+                @{
+                    var Mensaje = "";
+
+                    if (TempData["Mensaje"] != null)
+                    {
+                        Mensaje = TempData["Mensaje"].ToString();
+                    }
+
+                    if (Mensaje == "Bienvenidx")
+                    {
+                        <center><h2 class="alert alert-success"><i>Bienvenidx a AJDesign</i></h2></center>
+                    }<br>
+                }
+                <h2>
+                    <center><i><b><u>AJDESIGN</u></b></i></center>
+                </h2>
+            </header>
+            <p>
+                <h4>
+                    ♥ AJDESIGN surge como un emprendimiento FAMILIAR?, con el único objetivo de poder brindarle
+                    a nuestros clientes diseños de buena calidad y brindarles la posibilidad de poder tener marca
+                    propia en sus emprendimientos. <br />
+
+                    El cliente puede bocetar en un papel lo que imagina y nosotros lo plasmamos y lo hacemos realidad.
+                    Contamos con precios muy accesibles y trabajamos con el 50% de la seña. Para darle mas tranquilidad
+                    y seguridad a nuestros clientes a medida que se va realizando el diseño se va pasando como va quedando
+                    por si el cliente desea modificar algo del diseño. El Cliente tiene 3 modificaciones SIN COSTO para
+                    modificar TODO lo que desee. A partir de la cuarta modificación tiene un recargo de $100 donde tambien
+                    podra modificar TODO lo que desee.
+                </h4>
+            </p>
+        </section>
+
+        <!-- Two -->
+        <section id="two">
+            <center><h1><i><b>Galería de trabajos</b></i></h1></center>
+            <div class="row">
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="~/Content/img/fulls/a.jpg" class="image fit thumb"><img src="~/Content/img/fulls/a.jpg" /></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="~/Content/img/fulls/b.jpg" class="image fit thumb"<img src="~/Content/img/thumbs/b.jpg" />></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="~/Content/img/fulls/c.jpg" class="image fit thumb"><img src="~/Content/img/thumbs/c.jpg" alt="" /></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="~/Content/img/fulls/d.jpg" class="image fit thumb"><img src="~/Content/img/thumbs/d.jpg" alt="" /></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="~/Content/img/fulls/e.jpg" class="image fit thumb"><img src="~/Content/img/thumbs/e.jpg" alt="" /></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="~/Content/img/fulls/f.jpg" class="image fit thumb"><img src="~/Content/img/thumbs/f.jpg" alt="" /></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="~/Content/img/fulls/g.jpg" class="image fit thumb"><img src="~/Content/img/thumbs/g.jpg" alt="" /></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="~/Content/img/fulls/h.jpg" class="image fit thumb"><img src="~/Content/img/thumbs/h.jpg" alt="" /></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="~/Content/img/fulls/i.jpg" class="image fit thumb"><img src="~/Content/img/thumbs/i.jpg" alt="" /></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="~/Content/img/fulls/j.jpg" class="image fit thumb"><img src="~/Content/img/thumbs/j.jpg" alt="" /></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="~/Content/img/fulls/k.jpg" class="image fit thumb"><img src="~/Content/img/thumbs/k.jpg" alt="" /></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="~/Content/img/fulls/l.jpg" class="image fit thumb"><img src="~/Content/img/thumbs/l.jpg" alt="" /></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="~/Content/img/fulls/m.jpg" class="image fit thumb"><img src="~/Content/img/thumbs/m.jpg" alt="" /></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="~/Content/img/fulls/n.jpg" class="image fit thumb"><img src="~/Content/img/thumbs/n.jpg" alt="" /></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="~/Content/img/fulls/o.jpg" class="image fit thumb"><img src="~/Content/img/thumbs/o.jpg" alt="" /></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="~/Content/img/fulls/p.jpg" class="image fit thumb"><img src="~/Content/img/thumbs/p.jpg" alt="" /></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="~/Content/img/fulls/q.jpg" class="image fit thumb"><img src="~/Content/img/thumbs/q.jpg" alt="" /></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="~/Content/img/fulls/r.png" class="image fit thumb"><img src="~/Content/img/thumbs/r.png" alt="" /></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="~/Content/img/fulls/s.jpg" class="image fit thumb"><img src="~/Content/img/thumbs/s.jpg" alt="" /></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="~/Content/img/fulls/t.jpg" class="image fit thumb"><img src="~/Content/img/thumbs/t.jpg" alt="" /></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="~/Content/img/fulls/u.jpg" class="image fit thumb"><img src="~/Content/img/thumbs/u.jpg" alt="" /></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="~/Content/img/fulls/v.jpg" class="image fit thumb"><img src="~/Content/img/thumbs/v.jpg" alt="" /></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="~/Content/img/fulls/w.jpg" class="image fit thumb"><img src="~/Content/img/thumbs/w.jpg" alt="" /></a>
+                </article>
+            </div>
+        </section>
+
+
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <center>
+                    <ul class="icons">
+                        <li><a href="https://www.instagram.com/ajdesign.ok/?hl=es-la" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="https://www.facebook.com/a.a.12.96" target="_blank" class="icon brands fa-facebook"><span class="label">Dribbble</span></a></li>
+                        <li><a href="mailto:ajdesign.a.a@outlook.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+                    </ul>
+
+
+                    <ul class="copyright">
+                        <li>&copy; @DateTime.Now.Year</li>
+                        <li>AJDesign</li>
+                    </ul>
+                </center>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="~/Content/js/jquery.min.js"></script>
+        <script src="~/Content/js/jquery.poptrox.min.js"></script>
+        <script src="~/Content/js/browser.min.js"></script>
+        <script src="~/Content/js/breakpoints.min.js"></script>
+        <script src="~/Content/js/util.js"></script>
+        <script src="~/Content/js/main.js"></script>
+
+</body>
+</html>

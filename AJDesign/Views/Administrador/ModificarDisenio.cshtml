@@ -1,0 +1,29 @@
+﻿@model Entidades.Views.VMModificarDisenio
+@{
+    ViewBag.Title = "ModificarPrecio";
+}
+
+<h2>ModificarPrecio</h2>
+
+@using (Html.BeginForm("ModificarDisenio", "Administrador", FormMethod.Post, new { @class = "login100-form validate-form p-b-33 p-t-5" }))
+{
+    <input type="hidden" name="idDisenios" value=@Model.IdDisenios />
+
+    <div class="wrap-input100 validate-input">
+        @*Inputs con razor*@
+        @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "input100" } })
+        <span class="focus-input100"></span>
+        @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="wrap-input100 validate-input">
+        @*Inputs con razor*@
+        @Html.EditorFor(model => model.Precio, new { htmlAttributes = new { @class = "input100" } })
+        <span class="focus-input100"></span>
+        @Html.ValidationMessageFor(model => model.Precio, "", new { @class = "text-danger" })
+    </div>
+    <br />
+
+
+    <button type="submit">Modificar</button>
+}

@@ -1,0 +1,55 @@
+﻿@model List<Entidades.Disenios>
+@{
+    ViewBag.Title = "Precios |";
+}
+<link href="~/Content/Css/Footer.css" rel="stylesheet" />
+
+<center><i><b>Lista de precios</b></i></center>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col"><h3>Diseños</h3></th>
+            <th scope="col"><h3>Precios</h3></th>
+            <th scope="col"><h3>Actualizar precio</h3></th>
+            <th scope="col"><h3>Eliminar diseño</h3></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <th scope="col" class="text-danger">
+                @item.Nombre<br />
+            </th>
+            <th scope="col" class="text-danger">
+                @item.Precio
+            </th>
+
+            @using (Html.BeginForm("ModificarDisenio", "Administrador", FormMethod.Get, new { @class = "login100-form validate-form p-b-33 p-t-5" }))
+            {
+                <th scope="col" class="text-danger">
+                    <a href="~/Administrador/ModificarDisenio?idDisenios=@item.IdDisenios">Modificar</a>
+                </th>
+            }
+
+            @using (Html.BeginForm("Eliminar", "Administrador", FormMethod.Get, new { @class = "login100-form validate-form p-b-33 p-t-5" }))
+            {
+                <th scope="col" class="text-danger">
+                    <a href="~/Administrador/Eliminar?idDisenios=@item.IdDisenios">Eliminar</a>
+                </th>
+            }
+        </tr>
+                
+            }
+    </tbody>
+</table>
+<a href="~/Administrador/AgregarDisenio">Agregar diseño</a>
+
+<center>
+    <footer class="footer-bs">
+        <div class="color">
+            &copy; @DateTime.Now.Year</&copy;>
+            AJDesign
+        </div>
+    </footer>
+</center>
