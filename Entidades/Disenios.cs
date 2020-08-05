@@ -11,11 +11,17 @@ namespace Entidades
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Disenios
     {
         public int IdDisenios { get; set; }
+
+        [Required(ErrorMessage = "Debe ingresar un nombre")]
         public string Nombre { get; set; }
+
+        [Required(ErrorMessage = "Debe ingresar un precio")]
+
         public int Precio { get; set; }
     }
 }

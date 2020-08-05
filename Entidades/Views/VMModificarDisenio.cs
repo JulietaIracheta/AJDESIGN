@@ -9,8 +9,10 @@ namespace Entidades.Views
 {
     public class VMModificarDisenio
     {
+        [Required]
         public int Precio { get; set; }
 
+        [Required]
         public string Nombre { get; set; }
 
         public int IdDisenios { get; set; }

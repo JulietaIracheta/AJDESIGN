@@ -42,9 +42,9 @@ namespace Dao
 
         public Disenios AgregarDisenio(Disenios d)
         {
-            Disenios disenios = context.Disenios.Add(d);
+            Disenios di = context.Disenios.Add(d);            
             context.SaveChanges();
-            return disenios;
+            return di;
         }
     }
 }

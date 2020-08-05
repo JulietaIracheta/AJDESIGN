@@ -35,7 +35,20 @@ namespace AJDesign.Controllers
         [HttpPost]
         public ActionResult AgregarDisenio(VMAgregarDisenios agregardisenio)
         {
-            servicioAdministrador.AgregarDisenio(agregardisenio);
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return View();
+                }
+                else
+                {
+                    servicioAdministrador.AgregarDisenio(agregardisenio);
+                }
+            }catch (Exception ex)
+            {
+                ModelState.AddModelError("Error: ", ex.Message);
+            }
             return RedirectToAction("Precio", "Precios");
         }
 
@@ -50,7 +63,21 @@ namespace AJDesign.Controllers
         [HttpPost]
         public ActionResult ModificarDisenio(VMModificarDisenio p)
         {
-            servicioAdministrador.actualizarPrecio(p);
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return View(p);
+                }
+                else
+                {
+                    servicioAdministrador.actualizarPrecio(p);
+                }
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("Error: ", ex.Message);
+            }
             return RedirectToAction("Precio", "Precios"); 
         }
 
