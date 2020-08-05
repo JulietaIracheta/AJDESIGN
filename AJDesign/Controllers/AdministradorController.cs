@@ -19,6 +19,32 @@ namespace AJDesign.Controllers
             servicioAdministrador = new ServicioAdministrador(context);
         }
 
+        [HttpGet]
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(VMLogin vmlogin)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return View();
+                }
+                else
+                {
+                    servicioAdministrador.ValidarDatos(vmlogin);
+                }
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("Error: ", ex.Message);
+            }
+            return RedirectToAction("Precio", "Precios");
+        }
 
         // GET: Administrador
         public ActionResult Index()

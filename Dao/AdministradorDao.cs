@@ -46,5 +46,11 @@ namespace Dao
             context.SaveChanges();
             return di;
         }
+
+        public Usuarios ValidarDatos(Usuarios u)
+        {
+            Usuarios usu = context.Usuarios.Where(o => o.Nombre == u.Nombre).Where(o => o.Password == u.Password).FirstOrDefault();
+            return usu;
+        }
     }
 }

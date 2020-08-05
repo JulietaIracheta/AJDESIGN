@@ -1,0 +1,28 @@
+﻿@model Entidades.Views.VMLogin
+@{
+    ViewBag.Title = "Login";
+}
+
+<center>
+    <h2>Solo podrás iniciar sesión si sos administrador</br></h2>
+
+    @using (Html.BeginForm("Login", "Administrador", FormMethod.Post, new { @class = "login100-form validate-form p-b-33 p-t-5" }))
+    {
+
+        <div class="wrap-input100 validate-input">
+            @*Inputs con razor*@
+            Email  @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "input100" } })
+            <span class="focus-input100"></span>
+            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+        </div><br />
+
+        <div class="wrap-input100 validate-input">
+            @*Inputs con razor*@
+            Password @Html.PasswordFor(model => model.Password, new { htmlAttributes = new { @class = "input100" }, Type = "password" })
+            <span class="focus-input100"></span>
+            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+        </div><br />
+
+        <button type="submit">Iniciar sesión</button>
+    }
+</center>
