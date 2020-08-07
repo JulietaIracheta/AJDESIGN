@@ -2,7 +2,21 @@
 @{
     ViewBag.Title = "Login";
 }
+@{
+    var Mensaje = ""; //creo var mensaje vacia
 
+    if (TempData["Mensaje"] != null) //Si TempData no esta vacio, a la variable mensaje le asigno el valor de tempdata (Gracias por su donación)
+    {
+        Mensaje = TempData["Mensaje"].ToString();
+    }
+
+    if (Mensaje == "Email o password incorrecto") //Si mensaje es igual al mismo texto que puse en el controller (TempData["Mensaje"] = "Gracias por su donación") pongo el siguiente texto
+    {
+        <center><h2 class="p-3 mb-2 bg-success"><i>¡Email o password incorrecto!</i></h2></center>
+    }
+    <br>
+    <br>
+}
 <center>
     <h2>Solo podrás iniciar sesión si sos administrador</br></h2>
 

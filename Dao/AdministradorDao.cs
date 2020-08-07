@@ -47,10 +47,10 @@ namespace Dao
             return di;
         }
 
-        public Usuarios ValidarDatos(Usuarios u)
+        public List<Usuarios> TraerUnicoUsuario()
         {
-            Usuarios usu = context.Usuarios.Where(o => o.Nombre == u.Nombre).Where(o => o.Password == u.Password).FirstOrDefault();
-            return usu;
+            List<Usuarios> lista = context.Usuarios.ToList();
+            return lista;
         }
     }
 }

@@ -40,15 +40,21 @@ namespace Servicios
             return administradorDao.AgregarDisenio(d);
         }
 
-        public Usuarios ValidarDatos(VMLogin vmlogin)
+        public Boolean ValidarDatos(VMLogin vmlogin)
         {
-            Usuarios u = new Usuarios()
-            {
-                Email = vmlogin.Email,
-                Password = vmlogin.Password
-            };
+            List<Usuarios> usuario = administradorDao.TraerUnicoUsuario();
 
-            return administradorDao.ValidarDatos(u);
+            foreach (var item in usuario)
+            {
+                if (item.Email == vmlogin.Email && item.Password == vmlogin.Password)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            } return false;
         }
 
         public Disenios Eliminar(int idDisenios)

@@ -36,7 +36,17 @@ namespace AJDesign.Controllers
                 }
                 else
                 {
-                    servicioAdministrador.ValidarDatos(vmlogin);
+                    Boolean a = servicioAdministrador.ValidarDatos(vmlogin);
+                    if (a == true)
+                    {
+                        return RedirectToAction("Precio", "Precios");
+                    }
+                    else
+                    {
+                        //return RedirectToAction("Index","Home");
+                        TempData["Mensaje"] = "Email o password incorrecto";
+                        return View();
+                    }
                 }
             }
             catch (Exception ex)
